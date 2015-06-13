@@ -3,7 +3,6 @@
 //  DesposableClass
 //
 //  Created by Wiesner Péter Ádám on 27/02/14.
-//  Copyright (c) 2014 Distinction. All rights reserved.
 //
 
 #import "NSObject+desposableClass.h"
@@ -14,7 +13,11 @@ static NSMutableDictionary* _classes = nil;
 
 @implementation NSObject (desposableClass)
 
-//A shared array to store the template dictionaries, so default values can be accessed
+/**
+ *  A shared dictionary to store the template dictionaries, so default values can be accessed
+ *
+ *  @return The dictionary
+ */
 +(NSMutableDictionary*) classes
 {
     if (!_classes)
@@ -38,9 +41,9 @@ static NSMutableDictionary* _classes = nil;
     
     //For every entry in the template
     [template enumerateKeysAndObjectsUsingBlock:^(NSString* key, id obj, BOOL *stop) {
-       
-        //REGISTER NORMAL VALUE
-        char *encoding = @encode(id);//As dictionary only can hold objects, and all object can be referenced by an id (void*), this will do
+
+        //As dictionary only can hold objects, and all object can be referenced by an id (void*), this will do
+        char *encoding = @encode(id);
         NSUInteger size, align;
         NSGetSizeAndAlignment(encoding, &size, &align);
         class_addIvar(klass, [(NSString*)key UTF8String], size, align, encoding);
@@ -112,7 +115,8 @@ static id getProperty(id self, SEL _cmd, ...)
     NSString* classString = NSStringFromClass([self class]);
     NSAssert([classString hasPrefix:DisposablePrefix], @"%@ is not a Disposable class", classString);
     
-    [self performSelector:NSSelectorFromString([NSString stringWithFormat:@"set%@", [property capitalizedString]]) withObject:@4];//Set property
+    SEL selector = NSSelectorFromString([NSString stringWithFormat:@"set%@", [property capitalizedString]]);
+    ((void (*)(id, SEL, id))[self methodForSelector:selector])(self, selector, value);
 }
 
 -(id)disposableProperty:(NSString*)property

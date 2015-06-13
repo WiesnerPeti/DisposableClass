@@ -3,7 +3,6 @@
 //  DesposableClassTests
 //
 //  Created by Wiesner Péter Ádám on 27/02/14.
-//  Copyright (c) 2014 Distinction. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

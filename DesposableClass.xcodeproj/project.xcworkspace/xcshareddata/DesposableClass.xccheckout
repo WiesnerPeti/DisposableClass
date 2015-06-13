@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4654F6EC-9B5B-4A31-93D5-8759BC313659</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DesposableClass</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DD5080D58C2FAA730B32B4526C2A106D53123806</key>
+		<string>https://github.com/WiesnerPeti/DisposableClass.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DesposableClass.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DD5080D58C2FAA730B32B4526C2A106D53123806</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/WiesnerPeti/DisposableClass.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DD5080D58C2FAA730B32B4526C2A106D53123806</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DD5080D58C2FAA730B32B4526C2A106D53123806</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DisposableClass</string>
+		</dict>
+	</array>
+</dict>
+</plist>
